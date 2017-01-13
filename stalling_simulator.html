@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>stalling_simulator</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="stalling_simulator.css" />
+</head>
+
+<body>
+
+<div id="player_area">
+		<video id="vplayer" src="demo.mp4" poster="poster.jpg">
+		请更换支持HTML5的浏览器！
+		</video>
+		<img id="simage" src="loading.gif">
+</div>
+
+<div id="panel_area">
+	基本支撑功能实现：
+	<li>请点击<input type="button" value="开始" onClick="play()" />按钮，播放视频。</li>
+	<li>请点击<input type="button" value="卡顿" onClick="stall(1)" />按钮，体验卡顿。</li>
+	<li>请点击<input type="button" value="结束" onClick="stop()" />按钮，结束放映。</li>
+</div>
+</body>
+
+<script>
+function play()
+{
+	var v = document.getElementById("vplayer");
+	v.play();
+}
+
+function stall(t)
+{
+	var v = document.getElementById("vplayer");
+	v.pause();
+	var i = document.getElementById("simage");
+	i.style.zIndex  = 100;
+	setTimeout
+	(
+		function()
+		{
+			i.style.zIndex  = -1;
+			v.play();
+		},
+		t*1000
+	);
+}
+
+function stop()
+{
+	var v = document.getElementById("vplayer");
+	v.load();
+}
+</script>
+
+</html>

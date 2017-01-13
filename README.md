@@ -1,1 +1,3 @@
-# stalling_simulator
+## stalling_simulator
+
+stalling_simulator是一款基于HTML5+CSS+JavaScript实现的模拟器，用以可控地模拟在浏览器中播放视频时用户体验到的卡顿情况。
