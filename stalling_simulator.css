@@ -1,0 +1,38 @@
+#player_area
+{
+	width: 400px;
+	height: 300px;
+	margin: 0 auto;
+	position: relative;
+
+	border-style: solid;
+	border-width: 1px;
+	border-color: #000000
+}
+
+#vplayer
+{
+	width: 400px;
+	height: 300px;
+}
+
+#simage 
+{
+	width: 40px;
+	height: 40px;
+	z-index: -1;
+	
+	position: absolute;
+	left: 180px;
+	bottom: 130px;
+	text-align: center;
+}
+
+#panel_area
+{
+	width: 550px;
+	margin: 10px auto;
+	padding: 10px 10px 10px 10px;
+
+	background-color: #cccccc
+}
